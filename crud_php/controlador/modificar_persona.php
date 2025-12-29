@@ -1,0 +1,27 @@
+<?php
+if (!empty($_POST["btnregistrar"])) {
+    if (!empty($_POST["nombre"]) and !empty($_POST["apellido"])and !empty($_POST["dni"])and !empty($_POST["fecha"])and !empty($_POST["correo"])and !empty($_POST["celular"])and !empty($_POST["fecha_entra"])and !empty($_POST["fecha_sali"])and !empty($_POST["habitacion"])and !empty($_POST["cantidad"])) {
+        $id=$_POST["id"];
+        $nombre=$_POST["nombre"];
+        $apellido=$_POST["apellido"];
+        $dni=$_POST["dni"];
+        $fecha=$_POST["fecha"];
+        $correo=$_POST["correo"];
+        $celular=$_POST["celular"];
+        $fecha_entra=$_POST["fecha_entra"];
+        $fecha_sali=$_POST["fecha_sali"];
+        $habitacion=$_POST["habitacion"];
+        $cantidad=$_POST["cantidad"];
+        $sql=$conexion->query(" update persona set nombre='$nombre', apellido='$apellido' , dni='$dni' , fecha_nac='$fecha' , correo='$correo', celular='$celular', fecha_entra='$fecha_entra', fecha_sali='$fecha_sali', habitacion='$habitacion', cantidad='$cantidad' where id_persona=$id");
+        if ($sql==1) {
+            header("location:index.php");
+        } else {
+            echo"<div class='alert alert-danger'>Error al modificar</div>";
+        }
+        
+    }else {
+        echo"<div class='alert alert-warning'>campos vacios</div>";
+    }
+}
+
+?>

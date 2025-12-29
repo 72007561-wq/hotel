@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+}
+.parte-1 {
+  align-items: flex-end;
+  display: flex;
+  background-color:#f8f9fa;
+  justify-content: flex-end;
+  
+}
+.imagen-telefono {
+  width: 30px;
+  height: 30px;
+  padding: 1rem 1rem;
+  
+}
+.info-telefono {
+  font-size: 15px;
+  padding: 1rem 1rem;
+ 
+}
+.titulo {
+  padding: 1rem 25rem 1rem 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+
+.titulo2 {
+    color:#916E51;
+    text-align: center;
+    padding: 2rem;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
